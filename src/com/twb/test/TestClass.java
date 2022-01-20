@@ -16,6 +16,13 @@ public class TestClass {
 //            System.out.println(val.substring(0, val.length()-1));
 //        }
 
+//        List<Integer> list2 = new ArrayList<>(Arrays.asList(1, 2, 5, 4));
+        List<Integer> list = Arrays.asList(1, 2, 5, 4);
+        int res = list.stream().reduce(0, (sum, elt) -> sum + elt);
+        int res2 = list.stream().reduce(0, Integer::sum);
+
+        System.out.println("res: "+res+"\tres2: "+res2);
+
         int m=2;
         int sum = Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]})
                 .limit(m)
@@ -37,7 +44,7 @@ public class TestClass {
         int[] data = {2, 5, 2, 4, 3, 2, 8, 3, 5};
         filterDuplicates(data);
 
-        System.out.println();
+        System.out.println("\nBin Generate: ");
         generateBin(0, 12);
 
         int n = 4;
