@@ -29,9 +29,10 @@ public class SolutionCloseSet {
         return count;
     }
 
-    /*
-    int[] A= new int[] {-1, 6, 3, 4, 7, 4};
+    public static void main(String[] args) {
+        int[] A= new int[] {-1, 6, 3, 4, 7, 4};
         SolutionInversion sol = new SolutionInversion();
         System.out.println("\nInversion: "+sol.solution(A));
-     */
+    }
+
 }
